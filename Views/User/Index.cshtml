@@ -1,0 +1,22 @@
+﻿@using Ease.Extract.Web.Controllers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home </title>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("Get Metrics", "GetMetricsData", "EaseExtractData");
+    </div>
+    <div>
+        @Html.ActionLink("See Dashboard", "Dashboard", "EaseExtractData")
+    </div>
+</body>
+</html>

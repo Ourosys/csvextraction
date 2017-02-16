@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Ease.Model.Extract.UsageData>
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dashboard</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizationID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrgName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateFrom)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.DateTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PctAuditsCompleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumActiveUsers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PctMitigationsClosed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnvironmentID)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.OrganizationID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.SiteID)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.OrgName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.SiteName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.DateFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.DateTo)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.PctAuditsCompleted)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.NumActiveUsers)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.PctMitigationsClosed)
+            </td>
+            <td>
+                @Html.DisplayFor(model => item.EnvironmentID)
+            </td>
+
+        </tr>
+    }
+
+</table>
+

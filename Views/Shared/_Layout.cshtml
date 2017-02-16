@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/scripts/dashboard.css")" rel="stylesheet" type="text/css" />
+    @RenderSection("scripts", false)
+</head>
+<body>
+    <div style="width: auto; background-color: #728ea7;">
+        @if (Request.IsAuthenticated)
+        {
+            <strong>@Html.Encode(User.Identity.Name)</strong>
+            @Html.ActionLink("Sign Out", "Logout", "User")
+        }
+        else
+        {
+            <span> | </span>
+            @Html.ActionLink("Sign In", "Login", "User")
+        }
+    </div>
+
+    @RenderBody()
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
